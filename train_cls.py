@@ -46,9 +46,9 @@ def main(args):
     omegaconf.OmegaConf.set_struct(args, False)
 
     '''HYPER PARAMETER'''
-    os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
+    #os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
     logger = logging.getLogger(__name__)
-
+    print(omegaconf.OmegaConf.to_yaml(args))
     #print(args.pretty())
 
     '''DATA LOADING'''
